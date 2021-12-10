@@ -1,0 +1,30 @@
+<div class="container d-flex flex-column">
+
+    
+    <div class="row">
+
+        <div class="col-6">
+
+            <form (submit)="loginHandler($event)" class="bg-dark px-5">
+
+                <h1 class="text-success text-center py-3">Login</h1>
+                <label for="loginUsername" class="form-label text-white">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" [(ngModel)]="loginUsername"
+                    class="form-control mb-3">
+                <label for="loginPassword" class="form-label text-white">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" class="form-control mb-3"
+                    [(ngModel)]="loginPassword">
+                <button type="submit" class="btn btn-success my-4">Login</button>
+                <div class="pb-3" ><p class="text-white">{{errorMessage}}</p></div>
+            </form>
+
+        </div>
+
+        <div class="col-6">
+
+            <app-new-user-form></app-new-user-form>
+
+        </div>
+
+    </div>
+</div>

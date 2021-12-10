@@ -1,0 +1,18 @@
+<form (submit)="createNewUser($event)" class="bg-dark px-5">
+
+    <h1 class="text-primary text-center py-3">Register</h1>
+
+    <label for="firstName" class="form-label text-white">FirstName: </label>
+    <input type="text" id="firstName" name="firstName" class="form-control mb-3" [(ngModel)]="newUser.firstName">
+    <label for="lastName" class="form-label text-white">LastName: </label>
+    <input type="text" id="lastName" name="lastName" class="form-control mb-3" [(ngModel)]="newUser.lastName">
+    <label for="userName" class="form-label text-white">UserName: </label>
+    <input type="text" id="userName" name="userName" class="form-control mb-3" [(ngModel)]="newUser.userName">
+    <label for="password" class="form-label text-white">Password: </label>
+    <input type="password" id="password" name="password" class="form-control mb-3" [(ngModel)]="newUser.password">
+    <label for="confpass" class="form-label text-white">Confirm Password: </label>
+    <input type="password" id="confpass" name="confpass" class="form-control mb-3" [(ngModel)]="newUser.confpass">
+    <button type="submit" class="btn btn-primary my-4">Register</button>
+    <div class="pb-3" ><p class="text-white">{{errorMessage}}</p></div>
+
+</form>

@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex justify-content-end">
+    <button  [routerLink]="['/dashboard']" class="btn btn-link text-success">Go to Polls</button>
+</div>
+<h2>{{actualSurvey.question}}</h2>
+<h4>Click the vote button to choose one</h4>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Option</th>
+            <th>Current Count of Votes</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{actualSurvey.option1}}</td>
+            <td>{{actualSurvey.voteQ1}}</td>
+            <button (click)="prevenir($event)" (click)="addVote($event, actualSurvey._id, 'voteQ1')"  class="btn btn-success">Vote</button>
+        </tr>
+        <tr>
+            <td>{{actualSurvey.option2}}</td>
+            <td>{{actualSurvey.voteQ2}}</td>
+            <button (click)="addVote($event, actualSurvey._id, 'voteQ2')" class="btn btn-success">Vote</button>
+        </tr>
+        <tr>
+            <td>{{actualSurvey.option3}}</td>
+            <td>{{actualSurvey.voteQ3}}</td>
+            <button (click)="addVote($event, actualSurvey._id, 'voteQ3')" class="btn btn-success">Vote</button>
+        </tr>
+        <tr>
+            <td>{{actualSurvey.option4}}</td>
+            <td>{{actualSurvey.voteQ4}}</td>
+            <button (click)="addVote($event, actualSurvey._id, 'voteQ4')" class="btn btn-success">Vote</button>
+        </tr>
+    
+    </tbody>
+</table>

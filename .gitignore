@@ -1,0 +1,10 @@
+/survey-app/node_modules
+/survey-app/dist
+/node_modules
+
+.DS_Store
+.idea
+.vagrant
+bootstrap.sh
+VagrantFile
+bower_components/

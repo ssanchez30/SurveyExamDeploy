@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<form (submit)="createNewSurvey($event)">
+    <div class="bg-light">
+        <div class="d-flex justify-content-between">
+        <h2>Put the question and options here</h2>
+        <button [routerLink]="['/dashboard']" class="btn btn-link text-danger mr-5">Cancel</button>
+    </div>
+        <div class="border border-dark mx-5 py-5 px-4">
+
+            <div>
+                <label for="question" class="form-label">Question</label>
+                <input type="text" id="question" name="question" class="form-control" [(ngModel)]="newSurvey.question">
+                <label for="option1" class="form-label">Option 1</label>
+                <input type="text" id="option1" name="option1" class="form-control" [(ngModel)]="newSurvey.option1">
+                <label for="option2" class="form-label">Option 2</label>
+                <input type="text" id="option2" name="option2" class="form-control" [(ngModel)]="newSurvey.option2">
+                <label for="option3" class="form-label">Option 3</label>
+                <input type="text" id="option3" name="option3" class="form-control" [(ngModel)]="newSurvey.option3">
+                <label for="option4" class="form-label">Option 4</label>
+                <input type="text" id="option4" name="option4" class="form-control" [(ngModel)]="newSurvey.option4">
+                <button class="btn btn-success mt-3">Create Poll</button>
+
+
+            </div>
+        </div>
+    </div>
+
+</form>
